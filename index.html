@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IDM Heritage Run 4 | Partner & Group Reservation</title>
+
+    <meta name="description"
+        content="Partner and group reservation portal for Iloilo Dinagyang Marathon Heritage Run 4, January 17, 2027.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="portal-header">
+        <div class="portal-header-inner">
+
+            <div class="brand-lockup">
+                <div class="brand-mark">IDM</div>
+                <div class="brand-divider"></div>
+
+                <div class="brand-text">
+                    <span>HERITAGE RUN 4</span>
+                    <strong>PARTNER RESERVATION</strong>
+                </div>
+            </div>
+
+            <div class="header-event-date">
+                <span>JANUARY</span>
+                <strong>17.2027</strong>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="portal-hero">
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="hero-inner">
+
+                <div class="hero-eyebrow">
+                    ILOILO DINAGYANG MARATHON
+                </div>
+
+                <h1>
+                    PARTNER &amp;<br>
+                    GROUP RESERVATION
+                </h1>
+
+                <p>
+                    Reserve race slots for your club, team, organization,
+                    company, or group for Heritage Run 4.
+                </p>
+
+                <div class="hero-meta">
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        January 17, 2027
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Iloilo City, Philippines
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="portal-content">
+
+            <div class="intro-notice">
+
+                <div class="notice-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <strong>Reservation Portal</strong>
+
+                    <p>
+                        This portal is for partner, club, team, sponsor,
+                        organization, and group reservations.
+                        No payment is collected directly through this form.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">01</div>
+
+                    <div>
+                        <span class="section-kicker">
+                            RESERVATION DETAILS
+                        </span>
+
+                        <h2>Reservation Contact</h2>
+
+                        <p>
+                            Tell us who is coordinating this reservation.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <div class="form-grid">
+
+                        <div class="form-field full-width">
+                            <label for="contactName">
+                                Full Name
+                                <span>*</span>
+                            </label>
+
+                            <input type="text" id="contactName" name="contactName"
+                                placeholder="Enter the reservation contact's full name" required>
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="contactEmail">
+                                Email Address
+                                <span>*</span>
+                            </label>
+
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="you@example.com"
+                                required>
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="contactNumber">
+                                Contact Number
+                                <span>*</span>
+                            </label>
+
+                            <input type="tel" id="contactNumber" name="contactNumber" placeholder="09XXXXXXXXX"
+                                required>
+                        </div>
+
+
+                        <div class="form-field full-width">
+                            <label for="teamName">
+                                Club / Team / Organization
+                            </label>
+
+                            <input type="text" id="teamName" name="teamName"
+                                placeholder="Enter your club, team, company, or organization">
+
+                            <small>
+                                Leave blank if you are registering independently.
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="form-section">
+
+                <div class="section-heading participants-heading">
+
+                    <div class="section-number">02</div>
+
+                    <div class="heading-main">
+                        <span class="section-kicker">
+                            RUNNER INFORMATION
+                        </span>
+
+                        <h2>Participants</h2>
+
+                        <p>
+                            Add the runners included in this reservation.
+                        </p>
+                    </div>
+
+                    <div class="participant-counter">
+                        <strong id="participantCount">01</strong>
+                        <span>/ 11</span>
+                    </div>
+
+                </div>
+
+
+                <div id="participantsContainer"></div>
+
+
+                <div class="add-participant-wrap">
+
+                    <button type="button" class="add-participant-btn" id="addParticipantBtn">
+                        <span class="add-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+
+                        <span>
+                            <strong>Add Participant</strong>
+                            <small>Add another runner to this reservation</small>
+                        </span>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section class="summary-section">
+
+                <div class="summary-card">
+
+                    <div class="summary-header">
+
+                        <div>
+                            <span class="section-kicker">
+                                RESERVATION SUMMARY
+                            </span>
+
+                            <h2>Your Reservation</h2>
+                        </div>
+
+                        <div class="summary-status">
+                            <i class="fa-solid fa-calculator"></i>
+                            LIVE TOTAL
+                        </div>
+
+                    </div>
+
+
+                    <div class="distance-summary">
+
+                        <div class="summary-row">
+                            <div>
+                                <strong>5K Fun Run</strong>
+                                <span>₱899 per participant</span>
+                            </div>
+
+                            <strong id="summary5k">0</strong>
+                            <strong id="subtotal5k">₱0</strong>
+                        </div>
+
+
+                        <div class="summary-row">
+                            <div>
+                                <strong>10K Challenge Run</strong>
+                                <span>₱1,499 per participant</span>
+                            </div>
+
+                            <strong id="summary10k">0</strong>
+                            <strong id="subtotal10k">₱0</strong>
+                        </div>
+
+
+                        <div class="summary-row">
+                            <div>
+                                <strong>21K Half Marathon</strong>
+                                <span>₱1,899 per participant</span>
+                            </div>
+
+                            <strong id="summary21k">0</strong>
+                            <strong id="subtotal21k">₱0</strong>
+                        </div>
+
+
+                        <div class="summary-row">
+                            <div>
+                                <strong>42K Full Marathon</strong>
+                                <span>₱2,199 per participant</span>
+                            </div>
+
+                            <strong id="summary42k">0</strong>
+                            <strong id="subtotal42k">₱0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-total">
+                        <span>TOTAL RESERVATION</span>
+                        <strong id="grandTotal">₱0</strong>
+                    </div>
+
+
+                    <div class="payment-note">
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <p>
+                            No payment is collected through this portal.
+                            Payment arrangements will be coordinated
+                            separately after your reservation is submitted.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <div class="section-number">03</div>
+
+                    <div>
+                        <span class="section-kicker">
+                            FINAL ACKNOWLEDGMENT
+                        </span>
+
+                        <h2>Terms &amp; Privacy</h2>
+
+                        <p>
+                            Please read the acknowledgment carefully before
+                            submitting the reservation.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="waiver-card">
+
+                    <div class="waiver-scroll">
+
+                        <p>
+                            <strong>1.</strong>
+                            I acknowledge that participating in the
+                            Iloilo Dinagyang Marathon 4 Heritage Run 2027
+                            involves a significant level of physical exertion
+                            and is potentially hazardous. I hereby confirm
+                            that I am physically fit and capable of participating
+                            in this event.
+                        </p>
+
+                        <p>
+                            <strong>2.</strong>
+                            I understand that there are inherent risks
+                            associated with marathon running, including but
+                            not limited to: muscle strains, falls, collisions
+                            with other participants or objects, overexertion,
+                            dehydration, and other unforeseen conditions that
+                            may result in injury or loss.
+                        </p>
+
+                        <p>
+                            <strong>3.</strong>
+                            I willingly assume all risks associated with my
+                            participation in the Iloilo Dinagyang Marathon 4
+                            Heritage Run 2027, and I release and hold harmless
+                            the event organizers, sponsors, volunteers, and all
+                            related parties from any liability for any injury,
+                            loss, damage, or expense that may arise during or
+                            as a result of my participation in the event.
+                        </p>
+
+                        <p>
+                            <strong>4.</strong>
+                            I agree to comply with all event rules and
+                            regulations, as well as the instructions provided
+                            by event officials. I understand that failure to
+                            do so may result in my disqualification from
+                            the event.
+                        </p>
+
+                        <p>
+                            <strong>5.</strong>
+                            I grant permission to the event organizers and
+                            their authorized representatives to use any
+                            photographs, motion pictures, recordings, or any
+                            other media record of the event in which I may
+                            appear for any legitimate purpose, without
+                            compensation.
+                        </p>
+
+                        <p>
+                            <strong>6.</strong>
+                            I understand that the registration fee for the
+                            Iloilo Dinagyang Marathon 4 Heritage Run 2027
+                            is non-refundable, even in the event of my
+                            withdrawal from the race or cancellation of
+                            the event due to unforeseen circumstances.
+                        </p>
+
+                        <p>
+                            <strong>7.</strong>
+                            I confirm that I am authorized to submit this
+                            reservation on behalf of the participants listed
+                            above and that all information I have provided
+                            is true and correct to the best of my knowledge.
+                        </p>
+
+                        <p>
+                            <strong>8. Data Privacy.</strong>
+                            I understand that the personal information provided
+                            through this reservation portal, including but not
+                            limited to names, contact information, birth dates,
+                            gender, address, emergency contact details, race
+                            distance, and apparel sizes, will be collected and
+                            processed by <strong>Velocity 5000 Management Inc.</strong>
+                            and authorized event personnel for legitimate purposes
+                            related to the Iloilo Dinagyang Marathon 4 Heritage
+                            Run 2027, including reservation and registration
+                            processing, race administration, participant
+                            identification, race-day operations, safety and
+                            emergency response, communication, payment
+                            verification, and other purposes directly related
+                            to the organization and conduct of the event.
+                        </p>
+
+                        <p>
+                            Personal information may be shared, where necessary
+                            and appropriate, with authorized service providers,
+                            timing and race-operations partners, medical or
+                            emergency personnel, and other authorized parties
+                            involved in the administration and conduct of the
+                            event. Personal information will not be disclosed
+                            to unauthorized third parties except where required
+                            or permitted by law.
+                        </p>
+
+                        <p>
+                            Personal information will be retained only for as
+                            long as necessary to fulfill the purposes for which
+                            it was collected, comply with applicable legal and
+                            operational requirements, and establish, exercise,
+                            or defend legal claims, subject to the organization's
+                            applicable data-retention policies.
+                        </p>
+
+                        <p>
+                            I understand that, subject to applicable law, I have
+                            rights as a data subject, including the right to be
+                            informed about the processing of my personal
+                            information, the right to access and request
+                            correction of inaccurate information, and other
+                            rights provided under the Data Privacy Act of 2012.
+                        </p>
+
+                        <p>
+                            I confirm that I am authorized to submit the personal
+                            information of the participants listed in this
+                            reservation. I have informed the participants, where
+                            applicable, that their personal information will be
+                            collected and processed for the purposes stated
+                            above and have obtained any necessary authorization
+                            to provide their information through this portal.
+                        </p>
+
+                    </div>
+
+
+                    <label class="waiver-checkbox">
+
+                        <input type="checkbox" id="waiverAccepted" name="waiverAccepted" required>
+
+                        <span class="custom-checkbox"></span>
+
+                        <span class="checkbox-text">
+                            I have read and understood the terms above,
+                            and I confirm that I am authorized to submit
+                            this reservation on behalf of the listed
+                            participants.
+                            <strong>*</strong>
+                        </span>
+
+                    </label>
+
+
+                    <label class="waiver-checkbox privacy-checkbox">
+
+                        <input type="checkbox" id="privacyAccepted" name="privacyAccepted" required>
+
+                        <span class="custom-checkbox"></span>
+
+                        <span class="checkbox-text">
+                            I have read and understood the Data Privacy
+                            acknowledgment above. I confirm that I am
+                            authorized to provide the personal information
+                            of the participants listed in this reservation
+                            and acknowledge the collection and processing
+                            of personal information for the purposes stated
+                            above, in accordance with Republic Act No. 10173,
+                            otherwise known as the Data Privacy Act of 2012.
+                            <strong>*</strong>
+                        </span>
+
+                    </label>
+
+
+                    <div class="privacy-contact-note">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <p>
+                            For questions or requests concerning personal
+                            information or applicable data-subject rights,
+                            please contact the event organizer through the
+                            official contact channels provided on the
+                            Iloilo Dinagyang Marathon website.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="submit-section">
+
+                <div class="submit-card">
+
+                    <div class="submit-copy">
+
+                        <span class="section-kicker">
+                            READY TO RESERVE?
+                        </span>
+
+                        <h2>Review Your Details</h2>
+
+                        <p>
+                            Please make sure all participant information
+                            is correct before submitting your reservation.
+                        </p>
+
+                    </div>
+
+
+                    <button type="button" class="submit-btn" id="submitReservationBtn">
+                        <span>Submit Reservation</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <div class="modal" id="sizeChartModal" aria-hidden="true">
+
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div class="modal-dialog">
+
+            <button type="button" class="modal-close" id="modalClose" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-header">
+
+                <span class="section-kicker" id="modalKicker">
+                    SIZE GUIDE
+                </span>
+
+                <h2 id="modalTitle">
+                    Singlet Size Chart
+                </h2>
+
+            </div>
+
+            <div class="modal-image-wrap">
+
+                <img id="modalImage" src="" alt="Size chart">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="toast" id="toast" aria-hidden="true">
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span id="toastMessage">
+            Your reservation is ready.
+        </span>
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
